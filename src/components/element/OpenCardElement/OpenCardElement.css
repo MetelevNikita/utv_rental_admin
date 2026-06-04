@@ -1,0 +1,26 @@
+.endpoint_loading {
+    color: white;
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.endpoint_text {
+    color: white;
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+/*  */
+
+.open_card_edit_container {
+  margin-bottom: 10px;
+}
+
+.open_card_file {
+  color: white
+}
+
+

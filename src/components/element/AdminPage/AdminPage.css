@@ -1,0 +1,24 @@
+.admin_container {}
+
+.admin_title {
+  color: white;
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+}
+
+
+/* logo */
+
+
+.logo_container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.logo_img {
+  width: 300px;
+}
+
+/*  */

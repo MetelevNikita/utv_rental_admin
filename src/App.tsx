@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { FC } from 'react';
 
-function App() {
+// 
+
+import {Routes, Route } from 'react-router-dom';
+
+// elements
+
+import LoginPage from './components/element/LoginPage/LoginPage';
+import AdminPage from './components/element/AdminPage/AdminPage';
+import CardsPage from './components/element/CardsPage/CardsPage';
+import OpenCardElement from './components/element/OpenCardElement/OpenCardElement';
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+      <Routes>
+
+          <Route path="/admin/login" element={<LoginPage />} />
+
+          {/*  */}
+
+          <Route path="/admin" element={<AdminPage />} />
+
+          {/*  */}
+
+          <Route path="/admin/:endpoint" element={<CardsPage />} />
+          <Route path="/admin/:endpoint/:id" element={<OpenCardElement />} />
+
+
+      </Routes>
+
+  )
 }
 
-export default App;
+export default App

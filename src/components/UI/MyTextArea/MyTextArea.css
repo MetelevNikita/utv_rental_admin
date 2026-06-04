@@ -1,0 +1,37 @@
+.my_text_area_container {
+  width: 100%;
+
+  /*  */
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.my_text_area_title {
+  color: white;
+  font-size: 12px;
+  font-weight: 200;
+  margin-bottom: 15px;
+}
+
+.my_text_area_field {
+  margin-top: 5px;
+
+  /*  */
+  
+  width: 100%;
+
+  /*  */
+
+  padding-left: 10px;
+
+  /*  */
+
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.88);
+
+  /*  */
+
+  padding-top: 5px;
+  outline: none;
+}
