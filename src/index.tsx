@@ -13,10 +13,6 @@ import { Container } from 'react-bootstrap';
 
 import { BrowserRouter } from 'react-router-dom';
 
-// asset
-
-import logo from '../public/asset/Isolation_Mode.png'
-
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

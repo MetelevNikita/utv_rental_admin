@@ -92,7 +92,7 @@ const productField = [
     options: [
       {label: 'Камеры', value: 'camera'},
       {label: 'Свет', value: 'light'},
-      {label: 'Звук', value: 'sound'},
+      {label: 'Оптика', value: 'lens'},
       {label: 'Операторское оборудование', value: 'operator_equipment'},
     ]
   },
