@@ -327,6 +327,8 @@ const AdminPage: FC = () => {
         }    
       })
 
+      console.log(entries)
+
       const resultDataField = await Promise.all(entries)
       const resultDataFieldObj = Object.fromEntries(resultDataField)
 
@@ -334,6 +336,7 @@ const AdminPage: FC = () => {
 
 
       const data = await fetchToServer(`/api/v1/${endpoint}`, 'POST', resultDataFieldObj)
+      console.log(data)
 
       console.log(`Карточка ${data.success ? 'успешно создана' : `не создана ${data.message ?? ''}`}`)
 
