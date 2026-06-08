@@ -277,6 +277,9 @@ const serviseField = [
 
 
 
+
+
+
 // 
 
 function createField(field: any, state: any, setState: any) {
@@ -327,6 +330,8 @@ const AdminPage: FC = () => {
       const resultDataField = await Promise.all(entries)
       const resultDataFieldObj = Object.fromEntries(resultDataField)
 
+      console.log(resultDataFieldObj)
+
 
       const data = await fetchToServer(`/api/v1/${endpoint}`, 'POST', resultDataFieldObj)
       console.log(`Карточка ${data.success ? 'успешно создана' : 'не создана'}`)
@@ -355,7 +360,7 @@ const AdminPage: FC = () => {
   const [complectCard, setComplectCard] = useState<any | null>(null)
   const [serviceCard, setServiceCard] = useState<any | null>(null)
 
-  console.log(serviceCard)
+  console.log(productCard)
 
 
   // 
@@ -386,7 +391,7 @@ const AdminPage: FC = () => {
   }
 
 
-
+console.log("Menu ", menu)
 
 
   // 
@@ -424,6 +429,8 @@ const AdminPage: FC = () => {
         <div className='admin_title'>{(!menu) ? 'Не выбран раздел' : menu.title}</div>
 
 
+
+
         {
           (!menu) ? <div></div> : checkFormMenu(menu.title)
         }
@@ -436,7 +443,7 @@ const AdminPage: FC = () => {
                         <MyButton text={'Создать'} onClick={() => {
                           if (!menu) return
 
-                          if (menu.title === 'product') {
+                          if (menu.value === 'product') {
                             submitHandler(productCard, 'product')
                           } else if (menu.value === 'team') {
                             submitHandler(teamCard, 'team')
