@@ -334,12 +334,11 @@ const AdminPage: FC = () => {
 
 
       const data = await fetchToServer(`/api/v1/${endpoint}`, 'POST', resultDataFieldObj)
-      console.log("DATA ADMIN ", data)
-      console.log(`Карточка ${data.success ? 'успешно создана' : 'не создана'}`)
 
+      console.log(`Карточка ${data.success ? 'успешно создана' : `не создана ${data.message ?? ''}`}`)
 
-      // alert(`Карточка ${data.success ? 'успешно создана' : 'не создана'}`)
-      // navigate(0)
+      alert(`Карточка ${data.success ? 'успешно создана' : 'не создана'}`)
+      navigate(0)
       
 
     } catch (error: Error | unknown) {
