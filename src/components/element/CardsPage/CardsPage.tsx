@@ -95,26 +95,28 @@ const CardsPage: FC = () => {
 
   return (
       <Row className='d-flex flex-column justify-content-center align-items-center admin_container'>
-        <Col md={6} className='d-flex flex-column justify-content-center align-items-center admin_container'>
+        <Col md={12} className='d-flex flex-column justify-content-center align-items-center admin_container'>
 
           <div className='endpoint_text'>Страница с товарами - {endpoint}</div>
 
 
-            <Col className='d-flex'>
+            <Row className='d-flex justify-content-between' md={12}>
                 {
                   (cards.length > 0) && cards.map((card: any) => {
                     return (
-                      <CardElement
-                        title={card.title}
-                        image={card.imageOne}
-                        key={card.id}
-                        onClickDelete={() => {deleteHandler(endpoint, card.id, card.title)}}
-                        onClickEdit={() => {navigate(`/admin/${endpoint}/${card.id}`)}}
-                        />
+                      <Col className='d-flex justify-content-center' md={4}>
+                          <CardElement
+                            title={card.title}
+                            image={card.imageOne}
+                            key={card.id}
+                            onClickDelete={() => {deleteHandler(endpoint, card.id, card.title)}}
+                            onClickEdit={() => {navigate(`/admin/${endpoint}/${card.id}`)}}
+                          />
+                      </Col>
                     )
                   })
                 }
-            </Col>
+            </Row>
 
             <Col md={8}>
                 <MyButton style={{width: '100%'}} text={'Назад'} onClick={() => {
